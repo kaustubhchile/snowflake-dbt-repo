@@ -1,2 +1,4 @@
 name: "dbt_new_project"
 model-paths: [models]
+models:
+  materialized: "table"
