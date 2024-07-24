@@ -1,0 +1,15 @@
+sources:
+  - name: "flake1" # Giving name to our source
+    database: DB_ECOMM
+    schema: SC_ECOMM
+    tables:
+        - name: USERS
+
+
+models:
+  - name: "dbt2"
+    config: 
+      materialized: 'table'
+  - name: "dbt3"
+    config:
+      materialized: 'view'
