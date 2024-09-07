@@ -1,0 +1,7 @@
+seeds:
+  - name: names # File where you want to apply the settings to
+  # To specify configurations in the seeds file, one has to write 'config' 
+    config: 
+      full_refresh: True
+      column_types: 
+        ID: varchar(5)

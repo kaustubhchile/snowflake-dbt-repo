@@ -1,2 +1,5 @@
 name: "dbt_new_project"
 model-paths: [models]
+seed-paths: ["seeds"]
+analysis-paths: ["analyses"]
+macro-paths: ['macros']

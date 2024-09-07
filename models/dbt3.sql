@@ -1,2 +1,2 @@
 select * from {{source("flake1","USERS")}}
-where ID<3
+where ID<4

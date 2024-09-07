@@ -4,6 +4,14 @@ sources:
     schema: SC_ECOMM
     tables:
         - name: USERS
+        # From Macros
+        - name: olympics
+
+  - name: "flake2" # Giving name to our source
+    database: DB_ECOMM
+    schema: DBT_TRANSFORMED_DATA_SCH
+    tables:
+        - name: ACCIDENT
 
 
 models:
