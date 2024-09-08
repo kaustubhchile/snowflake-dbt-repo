@@ -4,7 +4,9 @@ sources:
     schema: SC_ECOMM
     tables:
         - name: USERS
+        - name: Payments
         # From Macros
+        - name: Financials
         - name: olympics
 
   - name: "flake2" # Giving name to our source
