@@ -8,6 +8,7 @@ sources:
         # From Macros
         - name: Financials
         - name: olympics
+        - name: sales
 
   - name: "flake2" # Giving name to our source
     database: DB_ECOMM
