@@ -9,6 +9,7 @@ sources:
         - name: Financials
         - name: olympics
         - name: sales
+        - name: SCD
 
   - name: "flake2" # Giving name to our source
     database: DB_ECOMM
