@@ -8,15 +8,14 @@
          check_cols=['FIRST_NAME', 'LAST_NAME'],
      )
 }}
-
 -- Updated_At strategy
--- {{
---         config(
---             schema='snapshots',
---             strategy='timestamp',
---             unique_key='ID',
---             updated_at='updated_at',
---         )
--- }}
+{#
+        config(
+            schema='snapshots',
+            strategy='timestamp',
+            unique_key='ID',
+            updated_at='updated_at',
+        )
+#}
 select * FROM {{source("flake1","SCD")}}
 {% endsnapshot %}
