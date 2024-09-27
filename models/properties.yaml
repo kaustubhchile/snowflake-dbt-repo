@@ -10,6 +10,8 @@ sources:
         - name: olympics
         - name: sales
         - name: SCD
+        - name: testing
+        - name: marketing
 
   - name: "flake2" # Giving name to our source
     database: DB_ECOMM
@@ -25,3 +27,25 @@ models:
   - name: "dbt3"
     config:
       materialized: 'view'
+  - name: "testing_docs"
+    columns: 
+      - name: ID
+        tests: 
+        - unique
+        - not_null
+        - relationships:
+            to: ref('test_relationship')
+            field: ID
+      - name: Gender
+        tests:
+          - accepted_values:
+              values: ["Male", "Female"]
+  - name: marketing_stg
+    columns:
+      - name: Sales
+        tests:
+          # - new_test
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 100  
+              max_value: 200 
+

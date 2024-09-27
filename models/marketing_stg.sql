@@ -1,0 +1,1 @@
+select * from {{source("flake1","marketing")}}
