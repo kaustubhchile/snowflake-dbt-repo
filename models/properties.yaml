@@ -1,9 +1,11 @@
 sources:
   - name: "flake1" # Giving name to our source
+    description: 'This is Kaustubhs Source'
     database: DB_ECOMM
     schema: SC_ECOMM
     tables:
         - name: USERS
+          description: "This table contains list of users"
         - name: Payments
         # From Macros
         - name: Financials
