@@ -13,7 +13,7 @@
 
 -- Conditional Logics
 -- IF Condition
-{% if 1==1 %}
+{%- if 1==1 -%}
     {{" Inside the first block "}}
 {% else %}
     {{" Inside the second block "}}

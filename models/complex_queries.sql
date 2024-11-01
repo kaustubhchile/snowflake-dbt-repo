@@ -1,13 +1,14 @@
 select *
 from {{source('flake1','Payments')}}
 
-select 
+select order_id,
 sum(case when PAYMENT_MODE='UPI' then SALES end) as UPI_SALES
 ,sum(case when PAYMENT_MODE='DC' then SALES end) as DC_SALES
 ,sum(case when PAYMENT_MODE='CC' then SALES end) as CC_SALES
 ,sum(case when PAYMENT_MODE='CASH' then SALES end) as CASH_SALES
 ,sum(case when PAYMENT_MODE='VOUCHER' then SALES end) as VOUCHER_SALES
 FROM {{source('flake1','Payments')}}
+group by order_id
 
 -- Jinja + SQL code
 -- {% set payment_mode=['UPI','DC','CC','CASH','VOUCHER']%}
