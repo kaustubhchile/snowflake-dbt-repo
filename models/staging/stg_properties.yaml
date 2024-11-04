@@ -1,5 +1,6 @@
 sources:
   - name: "Snowflake_Source"
+    description: '{{ doc("table_events") }}'
     database: DB_ECOMM
     schema: RAW
     tables:
