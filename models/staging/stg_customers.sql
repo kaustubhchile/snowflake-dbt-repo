@@ -11,7 +11,7 @@ with raw as (
 ),
 
 final as(
-    select ID as Customer_ID,
+    select ID as Customers_ID,
     FIRST_NAME,
     LAST_NAME
     from raw
