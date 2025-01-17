@@ -1,3 +1,4 @@
+{{config(materialized='table')}}
 select *,
 {{bmi('WEIGHT','HEIGHT')}} AS BMI
 from {{source('flake1','olympics')}}
